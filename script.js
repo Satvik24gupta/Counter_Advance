@@ -151,6 +151,8 @@ updateState(counter_array);
 
 
 function resetAllName(){
+    var ans=confirm("Are you sure you want to reset names of all counters?");
+    if(!ans) return
     counter_array.forEach((item)=>{
         item.name=""
     })
@@ -159,6 +161,8 @@ function resetAllName(){
 }
 
 function resetAllValue(){
+    var ans=confirm("Are you sure you want to reset values of all counters?");
+    if(!ans) return
     counter_array.forEach((item)=>{
         item.value="0"
     })
@@ -167,6 +171,8 @@ function resetAllValue(){
 }
 
 function deleteAll(){
+    var ans=confirm("Are you sure you want to delete all counters?");
+    if(!ans) return
     counter_array=[]
     saveList()
     updateState()
